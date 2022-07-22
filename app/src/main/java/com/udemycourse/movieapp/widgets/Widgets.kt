@@ -66,10 +66,6 @@ fun MovieRow(
                 style = MaterialTheme.typography.h6
             )
             Text(
-                text = "Director: ${movie.director}",
-                style = MaterialTheme.typography.caption
-            )
-            Text(
                 text = "Released: ${movie.year}",
                 style = MaterialTheme.typography.caption
             )
@@ -91,6 +87,10 @@ fun MovieRow(
                     Spacer(modifier = Modifier.height(8.dp))
                     Divider()
                     Spacer(modifier = Modifier.height(2.dp))
+                    Text(
+                        text = "Director: ${movie.director}",
+                        style = MaterialTheme.typography.caption
+                    )
                     Text(
                         text = "Actors: ${movie.actors}",
                         style = MaterialTheme.typography.caption
