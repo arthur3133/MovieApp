@@ -21,10 +21,10 @@ fun MovieNavigation() {
         }
 
         composable(
-            route = NavigationScreens.DetailsScreen.name+"/{movie}"
+            route = NavigationScreens.DetailsScreen.name+"/{movieId}"
         ) { navBackStackEntry ->
-            val movieName = navBackStackEntry.arguments?.getString("movie")
-            DetailsScreen(navController = navController, movieName = movieName.toString())
+            val movieId = navBackStackEntry.arguments?.getString("movieId")
+            DetailsScreen(navController = navController, movieId = movieId.toString())
         }
     }
 

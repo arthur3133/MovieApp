@@ -12,7 +12,7 @@ import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
 
 @Composable
-fun DetailsScreen(navController: NavController, movieName: String) {
+fun DetailsScreen(navController: NavController, movieId: String) {
     Scaffold(
         topBar = {
             TopAppBar(
@@ -40,16 +40,16 @@ fun DetailsScreen(navController: NavController, movieName: String) {
             }
         }
     ) {
-        Content(movieName = movieName)
+        Content(movieId = movieId)
     }
 }
 
 @Composable
-fun Content(movieName: String) {
+fun Content(movieId: String) {
     Surface(
         modifier = Modifier.fillMaxSize(),
         color = MaterialTheme.colors.background
     ) {
-        Text(text = movieName)
+        Text(text = movieId)
     }
 }
