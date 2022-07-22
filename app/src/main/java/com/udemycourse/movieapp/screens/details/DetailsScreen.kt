@@ -10,6 +10,8 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
+import com.udemycourse.movieapp.ui.theme.topAppBarBackgroundColor
+import com.udemycourse.movieapp.ui.theme.topAppBarTitleColor
 
 @Composable
 fun DetailsScreen(navController: NavController, movieId: String) {
@@ -17,7 +19,7 @@ fun DetailsScreen(navController: NavController, movieId: String) {
         topBar = {
             TopAppBar(
                 modifier = Modifier.fillMaxWidth(),
-                backgroundColor = MaterialTheme.colors.primary,
+                backgroundColor = topAppBarBackgroundColor,
                 elevation = AppBarDefaults.TopAppBarElevation
             ) {
                 Row(
@@ -28,13 +30,15 @@ fun DetailsScreen(navController: NavController, movieId: String) {
                     Icon(
                         imageVector = Icons.Default.ArrowBack, 
                         contentDescription = "Arrow Back Icon",
+                        tint = topAppBarTitleColor,
                         modifier = Modifier.clickable {
                             navController.popBackStack()
                     })
                     Spacer(modifier = Modifier.width(20.dp))
                     Text(
                         text = "Movie Details",
-                        style = MaterialTheme.typography.h6
+                        style = MaterialTheme.typography.h6,
+                        color = topAppBarTitleColor
                     )
                 }
             }
